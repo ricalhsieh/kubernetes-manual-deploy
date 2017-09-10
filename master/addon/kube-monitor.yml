@@ -12,7 +12,7 @@ spec:
   ports:
   - port: 80
     targetPort: 8082
-    nodePort: 30082
+    nodePort: 32082
   type: NodePort
 
 ---
@@ -28,7 +28,7 @@ spec:
    ports:
    - port: 100
      targetPort: 3000
-     nodePort: 30000
+     nodePort: 32000
    selector:
       name: influxGrafana
    type: NodePort
@@ -47,11 +47,11 @@ spec:
    - name: http
      port: 8083
      targetPort: 8083
-     nodePort: 30083
+     nodePort: 32083
    - name: api
      port: 8086
      targetPort: 8086
-     nodePort: 30086
+     nodePort: 32086
    selector:
       name: influxGrafana
    type: NodePort
@@ -94,7 +94,7 @@ spec:
           command:
             - /heapster
             - --source=kubernetes.summary_api:''
-            - --sink=influxdb:http://172.25.18.1:30086
+            - --sink=influxdb:http://172.25.18.11:32086
 
 ---
 apiVersion: extensions/v1beta1
@@ -122,7 +122,7 @@ spec:
         image: gcr.io/google_containers/heapster_grafana:v2.6.0-2
         env:
           - name: INFLUXDB_SERVICE_URL
-            value: http://172.25.18.1:30086
+            value: http://172.25.18.11:32086
         volumeMounts:
         - mountPath: /var
           name: grafana-storage
