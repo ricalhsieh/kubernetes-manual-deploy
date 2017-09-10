@@ -13,7 +13,7 @@ spec:
       path: "/etc/kubernetes"
   containers:
   - name: "kube-scheduler-amd64"
-    image: "gcr.io/google_containers/kube-scheduler-amd64:v1.7.4"
+    image: "gcr.io/google_containers/kube-scheduler-amd64:v1.7.5"
     command:
     - "kube-scheduler"
     - "--v=0"

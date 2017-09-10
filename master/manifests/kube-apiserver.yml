@@ -16,7 +16,7 @@ spec:
       path: "/etc/kubernetes"
   containers:
   - name: "kube-apiserver-amd64"
-    image: "gcr.io/google_containers/kube-apiserver-amd64:v1.7.4"
+    image: "gcr.io/google_containers/kube-apiserver-amd64:v1.7.5"
     command:
     - "kube-apiserver"
     - "--v=0"

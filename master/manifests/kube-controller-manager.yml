@@ -13,7 +13,7 @@ spec:
       path: "/etc/kubernetes"
   containers:
   - name: "kube-controller-manager-amd64"
-    image: "gcr.io/google_containers/kube-controller-manager-amd64:v1.7.4"
+    image: "gcr.io/google_containers/kube-controller-manager-amd64:v1.7.5"
     command:
     - "kube-controller-manager"
     - "--v=0"
